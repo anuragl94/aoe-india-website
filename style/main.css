@@ -24,7 +24,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text-primary);
   font-size: 16px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Dosis', sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -49,7 +49,8 @@ header {
   height: var(--header-height);
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-muted);
+  /* border-bottom: 1px solid var(--color-grey-accented); */
+  box-shadow: 0px 1px 2px 2px var(--color-grey-muted);
 }
 
 main {
@@ -59,6 +60,13 @@ main {
 footer {
   height: auto;
   flex-shrink: 0;
+  padding: var(--global-padding-sides);
+  /* border-top: 1px solid var(--color-grey-accented); */
+  box-shadow: 0px -1px 2px 2px var(--color-grey-muted);
+}
+
+footer > h4:first-child {
+  margin-top: 0;
 }
 
 button {
@@ -81,6 +89,7 @@ dialog {
   background-color: var(--color-bg);
   width: 360px;
   padding: 24px;
+  border: 1px solid var(--color-primary);
 }
 
 dialog[open] {
@@ -279,4 +288,23 @@ dialog > .modal-close-button {
 
 #account-dropdown-items li > a:hover {
   color: var(--color-text-primary-light);
+}
+
+.main-content {
+  padding: var(--global-padding-sides);
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-grid > * {
+  max-width: 120px;
+  min-width: 32px;
+  cursor: pointer;
 }
