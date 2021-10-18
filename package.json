@@ -1,0 +1,10 @@
+{
+  "name": "aoeindia-website",
+  "version": "1.0.0",
+  "description": "AoE India website prototype",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "author": "anurag.lingam@outlook.com",
+  "license": "ISC"
+}

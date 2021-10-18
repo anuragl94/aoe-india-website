@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>AoE India</title>
+  <link rel="stylesheet" href="./style/main.css"></link>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600&display=swap" rel="stylesheet">
+  <!-- TODO: Add suport for apple touch, etc -->
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <a id="logo" style="background-image: url(/assets/logo_flat.svg);" href="/"></a>
+    <div id="nav-links">
+      <button id="login-button" class="hidden">Log in</button>
+      <div id="account-dropdown" class="hidden">
+        <button id="account-dropdown-trigger">
+          <span id="logged-in-user">&nbsp;</span><i class="far fa-user"></i>
+        </button>
+        <div id="account-dropdown-items">
+          <ul>
+            <li><a>Profile</a></li>
+            <li><a id="logout">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="hero-banner-container">
+      <div class="slider-images-container">
+        <div class="slider-image" style="background-image: url(https://images4.alphacoders.com/618/618926.jpg);"></div>
+        <div class="slider-image" style="background-image: url(https://wallpaperaccess.com/full/662812.jpg);"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h4>Connect with us</h4>
+  </footer>
+  <dialog id="login-modal">
+    <!-- TODO: Replace close button with an SVG icon -->
+    <button class="modal-close-button">x</button>
+    <div id="login-form-switcher">
+      <form id="login">
+        <fieldset>
+          <h1>Log in</h1>
+          <input name="username" type="text" placeholder="Username" autocomplete="username" required />
+          <input name="password" type="password" placeholder="Password" autocomplete="password" required />
+          <button type="submit">Log into your account</button>
+          <!-- TODO: Setup an admin email -->
+          <div>Forgot credentials? <a href="mailto:admin@placeholder.com">Reset password</a></div>
+          <div>Don't have an account? <a href class="form-mode-switch">Sign up</a></div>
+        </fieldset>
+      </form>
+      <form id="signup">
+        <fieldset>
+          <h1>Sign up</h1>
+          <input name="email" type="email" placeholder="Email" autocomplete="email" required />
+          <input name="username" type="text" placeholder="Username" autocomplete="username" required />
+          <input name="password" type="password" placeholder="Password" autocomplete="new-password" required />
+          <button type="submit">Create a new account</button>
+          <div>Already have an account? <a href class="form-mode-switch">Log in</a></div>
+        </fieldset>
+      </form>
+    </div>
+  </dialog>  
+  <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+  <script src="https://kit.fontawesome.com/3087cd5bae.js" crossorigin="anonymous"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
